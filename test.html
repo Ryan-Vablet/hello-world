@@ -8,7 +8,7 @@
 </head>
 <body>
   <input type="text" id="amount">
-  <button onclick="submitOrderToSquare">Test</button>
+  <button onclick="submitOrderToSquare()">Test</button>
 </body>
 <script>
 function submitOrderToSquare () {
@@ -34,6 +34,9 @@ function submitOrderToSquare () {
       supported_tender_types: ['CREDIT_CARD', 'CASH', 'OTHER', 'SQUARE_GIFT_CARD', 'CARD_ON_FILE']
     }
   }
+
+  alert('square-commerce-v1://payment/create?data=' +
+    encodeURIComponent(JSON.stringify(dataParameter)))
 
   window.location =
     'square-commerce-v1://payment/create?data=' +
