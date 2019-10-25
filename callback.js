@@ -61,3 +61,5 @@ function printResponse() {
 
   document.getElementById('url').innerHTML = resultString;
 }
+
+printResponse();
