@@ -7,6 +7,7 @@ const errorField = "error_code";
 
 //get the data URL and encode in JSON
 function getTransactionInfo(URL) {
+  alert(JSON.stringify(URL))
   var data = decodeURI(URL.searchParams.get("data"));
 
   console.log("data: " + data);
